@@ -21,8 +21,13 @@ The system is built with **Java (JSP/Servlet, MVC, JDBC)** and connected to a re
 
 ## 📂 Project Structure
 Workshop2/
+
 ┣ src/ # Java source code (Controller, DAO, Model)
+
 ┣ web/ # JSP pages (View)
+
 ┣ database/ # SQL scripts for database schema
+
 ┣ README.md
+
 ┗ build.xml / pom.xml # Build file (Ant/Maven)
