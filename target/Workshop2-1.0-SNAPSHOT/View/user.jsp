@@ -39,7 +39,7 @@
          
                 <td>
                    
-                    <a href="delete?bid=${b.id_booking}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this product?');">Delete</a>
+                    <a href="delete?bid=${b.id_booking}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this room?');">Delete</a>
                 </td>
             </tr>
         </c:forEach>
