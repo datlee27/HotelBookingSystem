@@ -1,0 +1,87 @@
+/* ===== HERO ===== */
+.hero-banner {
+    position: relative;
+    min-height: 300px;                     /* chiều cao tối thiểu */
+    padding: 20px 0 20px;                /* padding dưới tạo chỗ cho search card */
+    color: #fff;
+/*    background: url('../img/banner.jpg') center/cover no-repeat;*/
+}
+
+.hero-banner::after {                     /* lớp phủ mờ */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .1);
+}
+
+.banner-content {                         /* chữ luôn ở trên overlay */
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== SEARCH CARD ===== */
+.search-card {
+    position: absolute;
+    left: 50%;
+    bottom: -50px;                        /* nửa nổi nửa chìm giống LuxStay */
+    transform: translateX(-50%);
+    background: #99ffff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.18);
+    z-index: 3;
+    color: #3366ff; 
+}
+
+/* Input & button */
+
+.search-card button.btn {
+    height: 44px;
+    font-weight: 300;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .hero-banner { padding: 100px 0 240px; }
+}
+
+@media (max-width: 768px) {
+    .hero-banner { text-align: center; }
+    .search-card {
+        position: static;                 /* rớt xuống dưới banner khi màn nhỏ */
+        transform: none;
+        margin-top: 30px;
+        width: 100%;
+    }
+}
+.search-card button.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.search-label {
+    color: #fff;           /* chữ trắng để nổi trên nền cyan */
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 1;
+    /* nếu muốn chữ xanh lá như LuxStay: color:#000000; */
+}
+
+/* ===== INPUT & SELECT ===== */
+.search-card .form-control,
+.search-card .form-select {
+    height: 44px;
+    font-size: 15px;
+}
+
+/* ===== NÚT “Search Rooms” ===== */
+.search-btn {
+    white-space: nowrap;   /* không cho xuống dòng lung tung */
+    font-weight: 400;
+    height: 100%;          /* chiếm đủ chiều cao cột */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px;
+}

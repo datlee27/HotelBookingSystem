@@ -1,0 +1,135 @@
+/* ======================= Common Button Style ======================= */
+.navbar-nav .nav-link,
+.btn-custom {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+/* ======================= Home, Contact, Login Link Buttons ======================= */
+.navbar-nav .nav-link {
+    background-color: #ffffff;
+    color: #2c3e50 !important;
+    border: 1.5px solid #2c3e50;
+    margin-left: 8px;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #6666ff;
+    color: #fff !important;
+    border-color: #007bff;
+    text-decoration: none;
+}
+
+/* ======================= Form Button - Find Room ======================= */
+.form-inline .btn-success {
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    border-radius: 25px;
+    padding: 8px 20px;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: 0.3s ease;
+}
+
+.form-inline .btn-success:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: translateY(-2px);
+}
+
+/* ======================= Input Fields Check-in / Check-out ======================= */
+.form-inline input[type="datetime-local"] {
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 6px 12px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form-inline input[type="datetime-local"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ======================= Login Modal Button ======================= */
+.modal-content .btn-success {
+    background: linear-gradient(to right, #ccccff, #6666ff);
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+   
+}
+
+.modal-content .btn-success:hover {
+    background: linear-gradient(to right, #00cccc, #0066cc);
+    transform: scale(1.03);
+}
+
+/* ======================= Eye Icon ======================= */
+#eye {
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+#eye:hover {
+    background-color: #0099ff;
+}
+
+
+
+/* ========== Layout & Overlay cho Login Modal ========== */
+#loginModal {
+    /* Giữ display:none – modal chỉ hiện khi JS đổi sang flex */
+    display: none;
+    position: fixed;                /* phủ kín màn hình */
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;        /* căn giữa form */
+    align-items: center;
+    background: rgba(0, 0, 0, 0.45);/* nền mờ */
+    z-index: 1050;                  /* cao hơn navbar */
+}
+
+/* ========== Kích thước form (modal-content) ========== */
+#loginModal .modal-content {
+    color: #0099ff; 
+    width: 100%;
+    max-width: 400px;   /* 👈 chính là “nhỏ lại” ở đây – chỉnh 320-400 tuỳ ý */
+    padding: 28px 32px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    animation: scaleIn 0.25s ease;
+}
+
+/* Hiệu ứng phóng to nhẹ khi hiện modal */
+@keyframes scaleIn {
+    from { transform: scale(0.85); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+/* ========== Tinh chỉnh phần tử bên trong (tuỳ chọn) ========== */
+#loginModal h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#loginModal .form-group label {
+    margin-bottom: .25rem;
+    font-weight: 600;
+}
+
+#loginModal .btn-success {
+    width: 100%;        /* nút rộng ngang form */
+    margin-top: .5rem;
+}

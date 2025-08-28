@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <servlet>
+        <servlet-name>BookingRoom</servlet-name>
+        <servlet-class>Controller.BookingRoom</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginControl</servlet-name>
+        <servlet-class>Controller.LoginControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>FindRoom</servlet-name>
+        <servlet-class>Controller.FindRoom</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>NewServlet</servlet-name>
+        <servlet-class>Controller.NewServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PrintBookingById</servlet-name>
+        <servlet-class>Controller.PrintBookingById</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteControl</servlet-name>
+        <servlet-class>Controller.DeleteControl</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ContactControl</servlet-name>
+        <servlet-class>Controller.ContactControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BookingRoom</servlet-name>
+        <url-pattern>/bookingroom</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginControl</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindRoom</servlet-name>
+        <url-pattern>/findroom</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>NewServlet</servlet-name>
+        <url-pattern>/NewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PrintBookingById</servlet-name>
+        <url-pattern>/printbooking</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteControl</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ContactControl</servlet-name>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+       <filter>
+    <filter-name>LogFilter</filter-name>
+    <filter-class>filter.LogFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>LogFilter</filter-name>
+    <url-pattern>/*</url-pattern> <!-- Áp dụng cho toàn bộ project -->
+</filter-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <!-- Gọi các file này đầu tiên khi chạy web -->
+    <welcome-file-list>
+        <welcome-file>room</welcome-file>
+    </welcome-file-list>
+</web-app>
