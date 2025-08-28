@@ -31,3 +31,15 @@ Workshop2/
 ┣ README.md
 
 ┗ build.xml / pom.xml # Build file (Ant/Maven)
+## 📸 Screenshots
+
+### 🔑 Login Page
+![Login Page](screenshot/login.png)
+
+### 🛏️ Room List
+![Room List](screenshot/booking.png)
+
+### 📅 Booking Page
+![Booking Page](screenshot/check_booking.png)
+![Booking Page](screenshot/book_room.png)
+
